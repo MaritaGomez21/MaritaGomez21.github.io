@@ -1,18 +1,12 @@
 ---
-layout: page
+layout: archive
 title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+# Hi! I'm Marita Gomez
+I started my career as a chemist. Naturally curious in understanding how processes work and how things, products, systems are made. Through the years I learned to be resourceful with new tools or tools that are available which led me to my second career in data analysis and development. I taught myself SQL and learned to use different tools SQL Server, Tableau, VSCode, Github, and finally build and configure within Salesforce (screen, record trigger flows, autolaunched flows, Triggers, classes, and write Tests).
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I am a lifelong learner and passionate about finding solutions as a Salesforce Administrator/Developer.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Currently looking for work that utilizes my expertise and industry knowledge and allows me to grow as a Salesforce Administrator and Developer.
