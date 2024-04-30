@@ -10,3 +10,12 @@ I started my career as a chemist. Naturally curious in understanding how process
 I am a lifelong learner and passionate about finding solutions as a Salesforce Administrator/Developer.
 
 Currently looking for work that utilizes my expertise and industry knowledge and allows me to grow as a Salesforce Administrator and Developer.
+
+## My Skills
+### Technical Skills
+
+{% include technicalskills.md %}
+
+### Soft Skills
+
+{% include softskills.md %}
