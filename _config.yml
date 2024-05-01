@@ -28,7 +28,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://maritagomez21.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 github_username:  MaritaGomez21
-
+search: true
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 plugins:
