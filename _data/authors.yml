@@ -1,7 +1,7 @@
 Marita Gomez:
   name        : "Marita Gomez"
   bio         : "Let's talk about code! Reach out via the links below."
-  avatar      : "(/assets/images/MGLOGO.jpg)"
+  avatar      : "![Marita Gomez](/assets/images/MGLOGO.jpg){: .avatar}"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
