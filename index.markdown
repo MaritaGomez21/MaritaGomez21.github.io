@@ -3,6 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+author: Marita Gomez
+author_profile: true
 ---
 ![Marita Gomez](/assets/images/portfolio_header.jpg){: .avatar}
 # Hi there! I'm Marita Gomez.
