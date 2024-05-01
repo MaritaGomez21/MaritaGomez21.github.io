@@ -1,11 +1,15 @@
 ---
-layout: post
+layout: posts
 title:  "Welcome to Jekyll!"
 date:   2024-04-30 15:48:21 +0000
 categories: article
 highlight_home: true
 tags: Salesforce
 description: this is an article about Salesforce
+header:
+ overlay_image: https://unsplash.com/photos/a-group-of-white-flowers-sitting-on-top-of-a-lush-green-hillside-1iBXLMjjgb8
+ teaser: https://unsplash.com/photos/a-group-of-white-flowers-sitting-on-top-of-a-lush-green-hillside-1iBXLMjjgb8
+ caption: "Photo Credit: [Unsplash: Michaja Sudar](https://unsplash.com/@michaja_sudar)"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
