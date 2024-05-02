@@ -28,12 +28,12 @@ Utilized OOB Salesforce Service Cloud standard objects and features to stand up 
 * Submit a Question/Feedback Form - A simple screen flow in the Sales Console’s Utility Bar so that Salesforce Users were able reach out for help without leaving their workspace.
 
 ### The Screen Flow included the following features:
-* Simple screen requesting only 3 user inputs
-* A picklist field: Case Type (for example Question/Training, Bug, Data Upload, or Permission Related)
-* An option to upload a file (limited to .csv, .xlsx, .jpeg, .jpg, or .png)
-* A description field to provide the user ample space to provide specific details of their request
-* The user information and user inputs provided the necessary information to create a case
-* The case would be assigned to the admin queue
+* Simple screen requesting only 3 user inputs.
+* A picklist field: Case Type (for example Question/Training (selected by default), Bug, Data Upload, or Permission Related).
+* An option to upload a file (limited to .csv, .xlsx, .jpeg, .jpg, or .png).
+* A required description field to provide the user ample space to provide specific details of their request.
+* The user information and user inputs provided the necessary information to create a case.
+* The case would be assigned to the admin queue.
 * Case information within the screen flow would then be used to send a confirmation email to the user and notification email to the administrators.
 
 ## The Results
