@@ -29,12 +29,12 @@ Utilized OOB Salesforce Service Cloud standard objects and features to stand up 
 
 ### The Screen Flow included the following features:
 * Simple screen requesting only 3 user inputs
-* Select a Case Type from a picklist (Question/Training, Bug, Data Upload, or Permission Related)
-* Option to upload a file (limited to .csv, .xlsx, .jpeg, .jpg, or .png)
-* Description field, to provide the user ample space to provide specific details of their request
-* User information and inputs provided the necessary information to create a case
+* A picklist field: Case Type (for example Question/Training, Bug, Data Upload, or Permission Related)
+* An option to upload a file (limited to .csv, .xlsx, .jpeg, .jpg, or .png)
+* A description field to provide the user ample space to provide specific details of their request
+* The user information and user inputs provided the necessary information to create a case
 * The case would be assigned to the admin queue
-* The case information within the screen flow would also be used to send a confirmation email to the use and notification email to the administrators.
+* Case information within the screen flow would then be used to send a confirmation email to the user and notification email to the administrators.
 
 ## The Results
 Improved User Experience. 
