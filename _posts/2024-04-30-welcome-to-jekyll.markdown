@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "Standing up a Help Desk for the Admins"
+title:  "Standing up a Help Desk for Admins"
 date:   2024-05-01 15:48:21 +0000
 tagline: "Effective Communication"
 tags: [Salesforce, Communication]
