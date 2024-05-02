@@ -1,18 +1,18 @@
 ---
 layout: posts
-title:  "Standing up a Helpdesk for the Salesforce Administrators"
+title:  "Standing up a Help Desk for the Admins"
 date:   2024-05-01 15:48:21 +0000
-tagline: "User Experience"
-tags: [Salesforce]
+tagline: "Effective Communication"
+tags: [Salesforce, Communication]
 author_profile: true
 author: Marita Gomez
-categories: [article]
+categories: [work]
 highlight_home: true
 header:
  overlay_image: "/assets/images/unspashflowers.jpg"
  teaser: "/assets/images/unspashflowers.jpg"
  caption: "Photo Credit: [Unsplash: Christina Deravedisian](https://unsplash.com/@christinadera)"
-description: this is an article about Salesforce
+description: This is an example of how to setup a help desk for Salesforce Administrators
 ---
 >"The single biggest problem in communication is the illusion that it has taken place."
 -George Bernard Shaw,
@@ -42,4 +42,4 @@ Improved Administrator Efficiency and Communication.
 2. Transparency within the team as to who is already working the case.
 
 ## Next Steps
-Create a case for administrators to handle custom exceptions.
+Solution for administrators to handle custom exceptions.
