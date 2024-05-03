@@ -10,7 +10,7 @@ Marita Gomez:
       icon: "fas fa-fw fa-link"
       url: "https://maritagomez21.github.io/"
     - label: "LinkedIn"
-      icon: "fas fa-fw fa-linkedin"
+      icon: "/assets/images/317750_linkedin_icon.png"
       url: "https://www.linkedin.com/in/maritagomez21/"
     - label: "Trailhead"
       icon: "fas fa-fw fa-link"
