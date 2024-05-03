@@ -1,6 +1,7 @@
 ---
-title: "My Work"
-layout: archive
+layout: categories_work
+title: My Work
+author: Marita Gomez
 author_profile: true
 ---
 
