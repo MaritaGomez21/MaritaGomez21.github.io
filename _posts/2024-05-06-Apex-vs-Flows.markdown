@@ -17,18 +17,24 @@ description: This is a brief example of Apex vs Flows and using the right tool f
 >"If all you have is a hammer, everything looks like a nail."
 —Abraham Kaplan, Abraham Maslow
 
-#ARTICLE UNDER CONSTRUCTION
+# ARTICLE UNDER CONSTRUCTION
+With anything Salesforce there are multiple ways to provide a solution, the key is to provide a solution that is best for the user, business, and within generally accepted best practices. The solution is not always Apex nor always Flows or even automation.
 
-# The Situation
-The sales manager would like a task assigned to the lead owner to follow up with the lead based on selected product interest. If the product interest is changed for an existing lead then assign a task to the lead owner. With anything Salesforce there are multiple ways to provide a solution, the key is to provide a solution that is best for the user, business, and within generally accepted best practices.
+## The Situation
+In a hypothetical case the a sales manager would like a task assigned to the lead owner to follow up with the lead based on selected product interest. If the product interest is changed for an existing lead then assign a task to the lead owner. 
 
 ## The Approach
-[add details here]
+In Salesforce, the following are only two of many ways to automate the creation of a task 
+* A record trigger flow
+* Apex
+To understand these 2 solutions of going either route (programmatic vs flows) I set up both utilizing separate developer orgs.
 
 ### The LeadTrigger, LeadTriggerHandler, UtilityClass, and LeadTriggerHandler Test
-[add details here]
+To keep in line with best practices, I set up a Lead Trigger to redirect records to their destined path of automation, Lead Trigger Handler to hold all the business logic, a Utility class to avoid having repetitive code ("DRY" aka don't repeat yourself!), and a Lead Trigger Handler Test class to not only meet Salesforce's minimum code coverage for deployments but to also make sure the code is working properly.
 
-### The Record Trigger Flow included the following features:
+Follow this link to the sample code. [Link soon to come!]
+
+### The Record Trigger Flow:
 * A simple formula to set up the entry criteria for the flow when a Lead Record is Created or Updated.
 * A decision element to determine if the Product Interest was changed (a simple way to segregate new records
 vs updated lead records).
