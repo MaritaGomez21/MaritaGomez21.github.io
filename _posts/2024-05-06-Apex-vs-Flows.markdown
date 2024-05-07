@@ -9,7 +9,7 @@ author: Marita Gomez
 categories: [article]
 highlight_home: true
 header:
- overlay_image: "/assets/images/hammerscrew.jpg"
+ overlay_image: "/assets/images/HammerScrewBanner.jpg"
  teaser: "/assets/images/hammerscrew.jpg"
  
 description: This is a brief example of Apex vs Flows and using the right tool for the job.
@@ -20,7 +20,7 @@ description: This is a brief example of Apex vs Flows and using the right tool f
 #ARTICLE UNDER CONSTRUCTION
 
 # The Situation
-A real use case for automations is to automatically create a task for the lead owner to follow up with the new lead based on the product interest or when the lead was updated based on a product change. This business request can be solved with either a record trigger flow or Apex. To understand the approach of using Apex vs Flows I did both but in 2 seperate developer orgs.
+The sales manager would like a task assigned to the lead owner to follow up with the lead based on selected product interest. If the product interest is changed for an existing lead then assign a task to the lead owner. With anything Salesforce there are multiple ways to provide a solution, the key is to provide a solution that is best for the user, business, and within generally accepted best practices.
 
 ## The Approach
 [add details here]
