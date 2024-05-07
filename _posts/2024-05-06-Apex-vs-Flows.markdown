@@ -17,6 +17,7 @@ description: This is a brief example of Apex vs Flows and using the right tool f
 >"If all you have is a hammer, everything looks like a nail."
 —Abraham Kaplan, Abraham Maslow
 
+#ARTICLE UNDER CONSTRUCTION
 
 # The Situation
 A real use case for automations is to automatically create a task for the lead owner to follow up with the new lead based on the product interest or when the lead was updated based on a product change. This business request can be solved with either a record trigger flow or Apex. To understand the approach of using Apex vs Flows I did both but in 2 seperate developer orgs.
