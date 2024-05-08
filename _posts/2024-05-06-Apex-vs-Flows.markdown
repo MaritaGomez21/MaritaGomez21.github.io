@@ -24,7 +24,7 @@ With anything Salesforce there are multiple ways to provide a solution, the key 
 In a hypothetical case the a sales manager would like a task assigned to the lead owner to follow up with the lead based on selected product interest. If the product interest is changed for an existing lead then assign a task to the lead owner. 
 
 ## The Approach
-In Salesforce, the following are only two of many ways to automate the creation of a task 
+In Salesforce, the following are two examples of how to solution this business request:
 1. An After Save Record Trigger Flow
 2. Apex Trigger, Handler, Utility Class, and Test
 To understand these 2 solutions of going either route (programmatic vs flows) I set up both utilizing separate developer orgs.
@@ -32,13 +32,32 @@ To understand these 2 solutions of going either route (programmatic vs flows) I 
 ### The Record Trigger Flow:
 Simple After Save Record Trigger Flow can be set up as follows:
 
-"/assets/images/Lead Flow.jpg"
+![LeadFlow](/assets/images/Lead Flow.jpg)
 
 * A simple formula to set up the entry criteria for the flow when a Lead Record is Created or Updated.
-* A decision element to determine if the Product Interest was changed (a simple way to segregate new records
-vs updated lead records).
-* If the lead record is new, [ustomize the verbage]
-* If the lead record was updated and the product interest was changed, then [use this verbage]
+
+![Lead Flow Entry Criteria](/assets/images/LeadFlowEntryCriteria.jpg)
+
+* A decision element to determine if the lead record is new or if the product interest was changed (meaning the lead record was updated).
+
+![Lead Flow Decision Element](/assets/images/LeadFlowDecisionElement.jpg)
+
+* If the lead record was updated and the product interest was changed, then create a task with the subject as indicated in the following Text Template.
+![Lead Flow Text Template Prod Interest Changed](/assets/images/LeadFlowTextTemplateProdInterestChanged.jpg)
+
+![Lead Flow Create Records Prod Interest Changed](/assets/images/LeadFlowCreateRecordsProdInterestChanged.jpg)
+
+* If the lead record was new, then create a task with the subject line as indicated in the following Text Template.
+![Lead Flow Text Template New Record](/assets/images/LeadFlowTextTemplateNewRecord.jpg)
+
+![Lead Flow Create Task for New Record](/assets/images/LeadFlowCreateTaskforNewRecord.jpg)
+
+* You can optionally set the Due Date dynamically (depends on business requirement) for the Task using the following formula resource.
+![Lead Flow Formula Due Date](/assets/images/FormulaDueDate.jpg)
+
+* Just in case there is ever an error, add error handling in the flow with a Fault Path and Custom Error. Creates a better user experience instead of seeing an Unhandled fault error.
+![Lead Flow Custom Error](/assets/images/CustomError.jpg)
+
 
 ### The Apex Trigger and Classes
 To keep in line with best practices, I set up a Lead Trigger to redirect records to their destined path of automation, Lead Trigger Handler to hold all the business logic, a Utility class to avoid having repetitive code ("DRY" aka don't repeat yourself!), and a Lead Trigger Handler Test class to not only meet Salesforce's minimum code coverage for deployments but to also make sure the code is working properly.
@@ -50,3 +69,5 @@ In this specific scenario...
 
 ## Next Steps
 [add details here]
+
+[def]: /assets/images/DecisionElement.jpg
