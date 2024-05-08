@@ -36,27 +36,31 @@ Simple After Save Record Trigger Flow can be set up as follows:
 
 * A simple formula to set up the entry criteria for the flow when a Lead Record is Created or Updated.
 
-![Lead Flow Entry Criteria](/assets/images/LeadFlowEntryCriteria.jpg)
+  ![Lead Flow Entry Criteria](/assets/images/LeadFlowEntryCriteria.jpg)
 
 * A decision element to determine if the lead record is new or if the product interest was changed (meaning the lead record was updated).
 
-![Lead Flow Decision Element](/assets/images/LeadFlowDecisionElement.jpg)
+  ![Lead Flow Decision Element](/assets/images/LeadFlowDecisionElement.jpg)
 
 * If the lead record was updated and the product interest was changed, then create a task with the subject as indicated in the following Text Template.
-![Lead Flow Text Template Prod](/assets/images/LeadFlowTextTemplateProdInterestChanged.png)
+  
+  ![Lead Flow Text Template Prod](/assets/images/LeadFlowTextTemplateProdInterestChanged.png)
 
-![Lead Flow Create Records Prod](/assets/images/LeadFlowCreateRecordsProdInterestChanged.jpg)
+  ![Lead Flow Create Records Prod](/assets/images/LeadFlowCreateRecordsProdInterestChanged.jpg)
 
 * If the lead record was new, then create a task with the subject line as indicated in the following Text Template.
-![Lead Flow Text Template New Record](/assets/images/LeadFlowTextTemplateNewRecord.png)
+  
+  ![Lead Flow Text Template New Record](/assets/images/LeadFlowTextTemplateNewRecord.png)
 
-![Lead Flow Create Task for New Record](/assets/images/LeadFlowCreateTaskforNewRecord.jpg)
+  ![Lead Flow Create Task for New Record](/assets/images/LeadFlowCreateTaskforNewRecord.jpg)
 
 * You can optionally set the Due Date dynamically (depends on business requirement) for the Task using the following formula resource.
-![Lead Flow Formula Due Date](/assets/images/LeadFlowFormulaDueDate.jpg)
+  
+  ![Lead Flow Formula Due Date](/assets/images/LeadFlowFormulaDueDate.jpg)
 
 * Just in case there is ever an error, add error handling in the flow with a Fault Path and Custom Error. Creates a better user experience instead of seeing an Unhandled fault error.
-![Lead Flow Custom Error](/assets/images/LeadFlowCustomError.jpg)
+  
+  ![Lead Flow Custom Error](/assets/images/LeadFlowCustomError.jpg)
 
 
 ### The Apex Trigger and Classes
