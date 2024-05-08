@@ -36,6 +36,12 @@ Follow this link to the sample code. [Link soon to come!]
 
 ### The Record Trigger Flow:
 * A simple formula to set up the entry criteria for the flow when a Lead Record is Created or Updated.
+
+```css
+
+ISNEW() || ISCHANGED({!$Record.ProductInterest__c})
+
+```
 * A decision element to determine if the Product Interest was changed (a simple way to segregate new records
 vs updated lead records).
 * If the lead record is new, [ustomize the verbage]
