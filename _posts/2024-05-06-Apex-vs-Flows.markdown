@@ -43,20 +43,20 @@ Simple After Save Record Trigger Flow can be set up as follows:
 ![Lead Flow Decision Element](/assets/images/LeadFlowDecisionElement.jpg)
 
 * If the lead record was updated and the product interest was changed, then create a task with the subject as indicated in the following Text Template.
-![Lead Flow Text Template Prod Interest Changed](/assets/images/LeadFlowTextTemplateProdInterestChanged.jpg)
+![Lead Flow Text Template Prod](/assets/images/LeadFlowTextTemplateProdInterestChanged.png)
 
-![Lead Flow Create Records Prod Interest Changed](/assets/images/LeadFlowCreateRecordsProdInterestChanged.jpg)
+![Lead Flow Create Records Prod](/assets/images/LeadFlowCreateRecordsProdInterestChanged.jpg)
 
 * If the lead record was new, then create a task with the subject line as indicated in the following Text Template.
-![Lead Flow Text Template New Record](/assets/images/LeadFlowTextTemplateNewRecord.jpg)
+![Lead Flow Text Template New Record](/assets/images/LeadFlowTextTemplateNewRecord.png)
 
 ![Lead Flow Create Task for New Record](/assets/images/LeadFlowCreateTaskforNewRecord.jpg)
 
 * You can optionally set the Due Date dynamically (depends on business requirement) for the Task using the following formula resource.
-![Lead Flow Formula Due Date](/assets/images/FormulaDueDate.jpg)
+![Lead Flow Formula Due Date](/assets/images/LeadFlowFormulaDueDate.jpg)
 
 * Just in case there is ever an error, add error handling in the flow with a Fault Path and Custom Error. Creates a better user experience instead of seeing an Unhandled fault error.
-![Lead Flow Custom Error](/assets/images/CustomError.jpg)
+![Lead Flow Custom Error](/assets/images/LeadFlowCustomError.jpg)
 
 
 ### The Apex Trigger and Classes
