@@ -25,28 +25,25 @@ In a hypothetical case the a sales manager would like a task assigned to the lea
 
 ## The Approach
 In Salesforce, the following are only two of many ways to automate the creation of a task 
-* A record trigger flow
-* Apex
+1. An After Save Record Trigger Flow
+2. Apex Trigger, Handler, Utility Class, and Test
 To understand these 2 solutions of going either route (programmatic vs flows) I set up both utilizing separate developer orgs.
 
-### The LeadTrigger, LeadTriggerHandler, UtilityClass, and LeadTriggerHandler Test
-To keep in line with best practices, I set up a Lead Trigger to redirect records to their destined path of automation, Lead Trigger Handler to hold all the business logic, a Utility class to avoid having repetitive code ("DRY" aka don't repeat yourself!), and a Lead Trigger Handler Test class to not only meet Salesforce's minimum code coverage for deployments but to also make sure the code is working properly.
-
-Follow this link to the sample code. [Link soon to come!]
-
 ### The Record Trigger Flow:
+Simple After Save Record Trigger Flow can be set up as follows:
+
+"/assets/images/Lead Flow.jpg"
+
 * A simple formula to set up the entry criteria for the flow when a Lead Record is Created or Updated.
-
-```css
-
-ISNEW() || ISCHANGED({!$Record.ProductInterest__c})
-
-```
 * A decision element to determine if the Product Interest was changed (a simple way to segregate new records
 vs updated lead records).
 * If the lead record is new, [ustomize the verbage]
 * If the lead record was updated and the product interest was changed, then [use this verbage]
 
+### The Apex Trigger and Classes
+To keep in line with best practices, I set up a Lead Trigger to redirect records to their destined path of automation, Lead Trigger Handler to hold all the business logic, a Utility class to avoid having repetitive code ("DRY" aka don't repeat yourself!), and a Lead Trigger Handler Test class to not only meet Salesforce's minimum code coverage for deployments but to also make sure the code is working properly.
+
+Follow this link to the sample code. [Link soon to come!]
 
 ## The Results
 In this specific scenario...
