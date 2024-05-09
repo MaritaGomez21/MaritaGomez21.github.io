@@ -66,7 +66,8 @@ Simple After Save Record Trigger Flow can be set up as follows:
 ### The Apex Trigger and Classes
 To keep in line with best practices, I set up a Lead Trigger to redirect records to their destined path of automation, Lead Trigger Handler to hold all the business logic, a Utility class to avoid having repetitive code ("DRY" aka don't repeat yourself!), and a Lead Trigger Handler Test class to not only meet Salesforce's minimum code coverage for deployments but to also make sure the code is working properly.
 
-Follow this link to the sample code. [Link soon to come!]
+[Follow this link to the sample code! (shared via a Github Gist)](https://gist.github.com/MaritaGomez21/cc291eed974221cff01f5a2e6aaae0c3)
+
 
 ## The Results
 In this specific scenario...
