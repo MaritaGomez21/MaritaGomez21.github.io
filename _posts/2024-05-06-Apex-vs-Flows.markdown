@@ -74,5 +74,3 @@ In this specific scenario...
 
 ## Next Steps
 [add details here]
-
-[def]: /assets/images/DecisionElement.jpg
