@@ -17,7 +17,7 @@ description: This is a brief example of Apex vs Flows and using the right tool f
 >"If all you have is a hammer, everything looks like a nail."
 —Abraham Kaplan, Abraham Maslow
 
-# ARTICLE UNDER CONSTRUCTION
+# Introduction
 With anything Salesforce there are multiple ways to provide a solution, the key is to provide a solution that is best for the user, business, and within generally accepted best practices. The solution is not always Apex nor always Flows or even automation.
 
 ## The Situation
@@ -70,7 +70,9 @@ To keep in line with best practices, I set up a Lead Trigger to redirect records
 
 
 ## The Results
-In this specific scenario...
+Setting up both the flow and Apex automation for this specific use case, at a glance, the flow solution wins in terms of time to set up, time needed to add or make changes based on business requirements, and less training involved for the administrator. With apex, the business logic can easily be modified in the trigger handler but the test class will also need to be reviewed for any changes.
+
+Simple use case to demonstrate Apex vs Flows, again its important to know how to use multiple tools for a job and when to use them. A hammer is one of the most important tools for a handy man but its not always the right tool, think of a nail vs a screw.
 
 ## Next Steps
-[add details here]
+Demonstrate a use case where Apex is the better choice for an automation vs a flow.
