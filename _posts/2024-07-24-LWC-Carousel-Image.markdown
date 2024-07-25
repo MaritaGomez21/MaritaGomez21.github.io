@@ -60,7 +60,7 @@ Screenshot of the result on a lightning record page:
 Screen Recording:
 The recording shows the lwc automatically playing to display the 3 images.
 
-{%https://youtu.be/Wn_HY4Un30M%}
+(https://youtu.be/Wn_HY4Un30M%)
 
 ## Resources:
 
