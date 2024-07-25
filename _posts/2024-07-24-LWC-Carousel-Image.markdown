@@ -20,10 +20,10 @@ description: This is an example of how to create a LWC Carousel Image Component
 # Goal
 
 Using the Carousel image component recipe from the Salesforce developer guide
-{ % https://developer.salesforce.com/docs/component-library/bundle/lightning-carousel-image/documentation % }
+{%https://developer.salesforce.com/docs/component-library/bundle/lightning-carousel-image/documentation%}
 
 and referencing lightning design system
-{ % https://www.lightningdesignsystem.com/components/carousel/ % }
+{%https://www.lightningdesignsystem.com/components/carousel/%}
 
 # Key steps
 
@@ -64,4 +64,4 @@ Screenshot of the result on a lightning record page:
 Screen Recording:
 The recording shows the lwc automatically playing to display the 3 images.
 
-{ % https://youtu.be/Wn_HY4Un30M % }
+{%https://youtu.be/Wn_HY4Un30M%}
