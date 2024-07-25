@@ -17,9 +17,7 @@ description: This is an example of how to create a LWC Carousel Image Component
 >"This is my advice to people: Learn how to cook, try new recipes, learn from your mistakes, be fearless, and above all have fun."
 -Julia Child
 
-## Caution post Under Construction!
-
-# Summary
+# Goal
 
 Using the Carousel image component recipe from the Salesforce developer guide
 { % https://developer.salesforce.com/docs/component-library/bundle/lightning-carousel-image/documentation % }
