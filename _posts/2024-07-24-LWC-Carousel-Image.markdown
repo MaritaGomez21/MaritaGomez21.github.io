@@ -22,10 +22,10 @@ description: This is an example of how to create a LWC Carousel Image Component
 # Summary
 
 Using the Carousel image component recipe from the Salesforce developer guide
-https://developer.salesforce.com/docs/component-library/bundle/lightning-carousel-image/documentation
+{ % https://developer.salesforce.com/docs/component-library/bundle/lightning-carousel-image/documentation % }
 
 and referencing lightning design system
-https://www.lightningdesignsystem.com/components/carousel/
+{ % https://www.lightningdesignsystem.com/components/carousel/ % }
 
 # Key steps
 
@@ -41,13 +41,19 @@ To display an image from the org’s static resources
 
 3. Expose the static resource URL for use; keyword: resourceURL
 
+![recipeCarousel js file](/assets/images/recipeCarousel-js.png)
+
 ### QUICK TIP: LWC Test file kept erroring out; to address the issue the following was changed: import {createElement } from ‘lwc’; to import { createElement } from "@lwc/engine-dom";
 
 4. To display the images use src={spicesUrl} as shown below
 
+![recipeCarousel html file](/assets/images/recipeCarousel-html.png)
+
 ### QUICK TEP: To center the component within the section of the lightning record page use “slds-align_absolute-center”
 
 5. Finally add the css
+
+![recipeCarousel css file](/assets/images/recipeCarousel-css.png)
 
 6. If possible, extend this project by aligning the auto-replay button.
 
@@ -56,3 +62,8 @@ To display an image from the org’s static resources
 Screenshot:
 
 ![Screenshot Carousel Demo](/assets/images/ScreenshotCarouselDemo.png)
+
+Screen Recording:
+The recording shows the lwc automatically playing to display the 3 images.
+
+{ % https://youtu.be/Wn_HY4Un30M % }
