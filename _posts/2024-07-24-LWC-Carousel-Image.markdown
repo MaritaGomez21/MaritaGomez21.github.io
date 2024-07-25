@@ -19,7 +19,7 @@ description: This is an example of how to create a LWC Carousel Image Component
 
 ## Caution post Under Construction!
 
-## Summary
+# Summary
 
 Using the Carousel image component recipe from the Salesforce developer guide
 https://developer.salesforce.com/docs/component-library/bundle/lightning-carousel-image/documentation
@@ -27,30 +27,32 @@ https://developer.salesforce.com/docs/component-library/bundle/lightning-carouse
 and referencing lightning design system
 https://www.lightningdesignsystem.com/components/carousel/
 
-## Key steps
+# Key steps
 
 To display an image from the org’s static resources
 
-1. One image file (vegetables)
+>>One image file (vegetables)
 
 ![Static Resources Vegetables](/assets/images/StaticResourcesVegetables.png)
 
-2. an image file within multiple files in a zip file (uploaded as a static resource)
-    a. spices
-    b. tangerines
+>>an image file within multiple files in a zip file (uploaded as a static resource)
+    
 ![Static Resources Ingredients](/assets/images/StaticResourcesIngredients.png)
-3. Expose the static resource URL for use; keyword: resourceURL
 
-# LWC Test file kept erroring out; to address the issue the following was changed: import {createElement } from ‘lwc’; to import { createElement } from "@lwc/engine-dom";
+>>Expose the static resource URL for use; keyword: resourceURL
 
-4. To display the images use src={spicesUrl} as shown below
+### LWC Test file kept erroring out; to address the issue the following was changed: import {createElement } from ‘lwc’; to import { createElement } from "@lwc/engine-dom";
 
-# To center the component within the section of the lightning record page use “slds-align_absolute-center”
+>>To display the images use src={spicesUrl} as shown below
 
-5. Finally add the css
+### To center the component within the section of the lightning record page use “slds-align_absolute-center”
 
-6. If possible, extend this project by aligning the auto-replay button.
+>>Finally add the css
 
-Results (Version 0)
+>>If possible, extend this project by aligning the auto-replay button.
+
+###Results (Version 1)
+
 Screenshot:
+
 ![Screenshot Carousel Demo](/assets/images/ScreenshotCarouselDemo.png)
