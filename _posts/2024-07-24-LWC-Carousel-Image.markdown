@@ -31,35 +31,35 @@ and referencing lightning design system
 
 To display an image from the org’s static resources
 
-1. One image file (vegetables)
+    1. One image file (vegetables)
 
 ![Static Resources Vegetables](/assets/images/StaticResourcesVegetables.png)
 
-2. an image file within multiple files in a zip file (uploaded as a static resource)
+    2. an image file within multiple files in a zip file (uploaded as a static resource)
     
 ![Static Resources Ingredients](/assets/images/StaticResourcesIngredients.png)
 
-3. Expose the static resource URL for use; keyword: resourceURL
+    3. Expose the static resource URL for use; keyword: resourceURL
 
 ![recipeCarousel js file](/assets/images/recipeCarousel-js.png)
 
-### QUICK TIP: LWC Test file kept erroring out; to address the issue the following was changed: import {createElement } from ‘lwc’; to import { createElement } from "@lwc/engine-dom";
+## QUICK TIP: LWC Test file kept erroring out; to address the issue the following was changed: import {createElement } from ‘lwc’; to import { createElement } from "@lwc/engine-dom";
 
-4. To display the images use src={spicesUrl} as shown below
+    4. To display the images use src={spicesUrl} as shown below
 
 ![recipeCarousel html file](/assets/images/recipeCarousel-html.png)
 
-### QUICK TEP: To center the component within the section of the lightning record page use “slds-align_absolute-center”
+## QUICK TIP: To center the component within the section of the lightning record page use “slds-align_absolute-center”
 
-5. Finally add the css
+    5. Finally add the css
 
 ![recipeCarousel css file](/assets/images/recipeCarousel-css.png)
 
-6. If possible, extend this project by aligning the auto-replay button.
+    6. If possible, extend this project by aligning the auto-replay button.
 
 ## Results (Version 1)
 
-Screenshot:
+Screenshot of the result on a lightning record page:
 
 ![Screenshot Carousel Demo](/assets/images/ScreenshotCarouselDemo.png)
 
