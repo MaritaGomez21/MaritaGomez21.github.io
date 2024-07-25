@@ -31,27 +31,27 @@ https://www.lightningdesignsystem.com/components/carousel/
 
 To display an image from the org’s static resources
 
->>One image file (vegetables)
+1. One image file (vegetables)
 
 ![Static Resources Vegetables](/assets/images/StaticResourcesVegetables.png)
 
->>an image file within multiple files in a zip file (uploaded as a static resource)
+2. an image file within multiple files in a zip file (uploaded as a static resource)
     
 ![Static Resources Ingredients](/assets/images/StaticResourcesIngredients.png)
 
->>Expose the static resource URL for use; keyword: resourceURL
+3. Expose the static resource URL for use; keyword: resourceURL
 
-### LWC Test file kept erroring out; to address the issue the following was changed: import {createElement } from ‘lwc’; to import { createElement } from "@lwc/engine-dom";
+### QUICK TIP: LWC Test file kept erroring out; to address the issue the following was changed: import {createElement } from ‘lwc’; to import { createElement } from "@lwc/engine-dom";
 
->>To display the images use src={spicesUrl} as shown below
+4. To display the images use src={spicesUrl} as shown below
 
-### To center the component within the section of the lightning record page use “slds-align_absolute-center”
+### QUICK TEP: To center the component within the section of the lightning record page use “slds-align_absolute-center”
 
->>Finally add the css
+5. Finally add the css
 
->>If possible, extend this project by aligning the auto-replay button.
+6. If possible, extend this project by aligning the auto-replay button.
 
-###Results (Version 1)
+## Results (Version 1)
 
 Screenshot:
 
