@@ -64,16 +64,14 @@ The recording shows the lwc automatically playing to display the 3 images.
 
 ## Resources:
 
-[Carousel image component recipe from the Salesforce developer guide]
-(https://developer.salesforce.com/docs/component-library/bundle/lightning-carousel-image/documentation%)
+[Carousel image component recipe from the Salesforce developer guide](https://developer.salesforce.com/docs/component-library/bundle/lightning-carousel-image/documentation%)
 
-[Carousel Lightning Design System]
-(https://www.lightningdesignsystem.com/components/carousel/)
+[Carousel Lightning Design System](https://www.lightningdesignsystem.com/components/carousel/)
 
 ## Images Credit:
 
-**Calum Lewis.** (https://unsplash.com/photos/five-gray-spoons-filled-with-assorted-color-powders-near-chilli-vA1L1jRTM70)
+[Calum Lewis. URL: https://unsplash.com/photos/five-gray-spoons-filled-with-assorted-color-powders-near-chilli-vA1L1jRTM70](https://unsplash.com/photos/five-gray-spoons-filled-with-assorted-color-powders-near-chilli-vA1L1jRTM70)
 
-**Anna Jakutajc-Wojtalik**. (https://unsplash.com/photos/a-pile-of-vegetables-and-eggs-on-a-table-Gxr5vwk1V3k)
+[Anna Jakutajc-Wojtalik. URL:https://unsplash.com/photos/a-pile-of-vegetables-and-eggs-on-a-table-Gxr5vwk1V3k](https://unsplash.com/photos/a-pile-of-vegetables-and-eggs-on-a-table-Gxr5vwk1V3k)
 
-**Margaret Jaszowska.** (https://unsplash.com/photos/orange-fruits-in-green-round-plastic-container-eJHd6OQx-XA)
+[Margaret Jaszowska. URL: https://unsplash.com/photos/orange-fruits-in-green-round-plastic-container-eJHd6OQx-XA](https://unsplash.com/photos/orange-fruits-in-green-round-plastic-container-eJHd6OQx-XA)
