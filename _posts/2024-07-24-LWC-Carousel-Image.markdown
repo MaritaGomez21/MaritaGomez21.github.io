@@ -23,33 +23,33 @@ Create a lightning web component for a lightning record page to display images. 
 
 # Key steps
 
-To display an image from the org’s static resources
+To display an image via lwc you can upload each image individually in a static resource file or reference an image from a zip file (with a collection of images) uploaded as a static resource.
 
-    1. One image file (vegetables)
+* In this scenario, one image file (vegetables) was uploaded individually as a static resource.
 
 ![Static Resources Vegetables](/assets/images/StaticResourcesVegetables.png)
 
-    2. an image file within multiple files in a zip file (uploaded as a static resource)
+* In the second scenario, a zip file with multiple files was uploaded as a static resource.
     
 ![Static Resources Ingredients](/assets/images/StaticResourcesIngredients.png)
 
-    3. Expose the static resource URL for use; keyword: resourceURL
+ * To expose the static resource URL for use in the HTML; use keyword: resourceURL in the JavaScript file first to pull it in from the org dynamically.
 
 ![recipeCarousel js file](/assets/images/recipeCarousel-js.png)
 
 ## QUICK TIP: LWC Test file kept erroring out; to address the issue the following was changed: import {createElement } from ‘lwc’; to import { createElement } from "@lwc/engine-dom";
 
-    4. To display the images use src={spicesUrl} as shown below
+* Then to display the images on the page use src={spicesUrl} as shown below in the html file.
 
 ![recipeCarousel html file](/assets/images/recipeCarousel-html.png)
 
 ## QUICK TIP: To center the component within the section of the lightning record page use “slds-align_absolute-center”
 
-    5. Finally add the css
+* Finally add the optional css file to the lwc.
 
 ![recipeCarousel css file](/assets/images/recipeCarousel-css.png)
 
-    6. If possible, extend this project by aligning the auto-replay button.
+* If possible, extend this project by aligning the auto-replay button.
 
 ## Results (Version 1)
 
