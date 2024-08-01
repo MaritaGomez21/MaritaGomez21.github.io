@@ -60,9 +60,10 @@ Screenshot of the result on a lightning record page:
 ![Screenshot Carousel Demo](/assets/images/ScreenshotCarouselDemo.png)
 
 Screen Recording:
-The recording shows the lwc automatically playing to display the 3 images.
+[The following link shows the lwc automatically playing on the record page to display the 3 images.](https://www.youtube.com/watch?v=Wn_HY4Un30M)
 
-(https://youtu.be/Wn_HY4Un30M%)
+
+
 
 ## Resources:
 
