@@ -24,8 +24,8 @@ Create a lightning web component for a lightning record page to display images. 
 # Key steps
 
 To display an image via lwc, image(s) can be referenced from a static resource file, 2 ways:
-* an image can be uploaded individually as a static resource file or 
-* an image can be referenced from a zip file (with a collection of images) uploaded as a static resource.
+1. an image can be uploaded individually as a static resource file or 
+2. an image can be referenced from a zip file (with a collection of images) uploaded as a static resource.
 
 * In this scenario, one image file (vegetables) was uploaded individually as a static resource.
 
