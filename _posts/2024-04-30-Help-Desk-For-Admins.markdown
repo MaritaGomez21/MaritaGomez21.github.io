@@ -6,7 +6,7 @@ tagline: "Effective Communication"
 tags: [Salesforce, Communication]
 author_profile: true
 author: Marita Gomez
-categories: [work]
+categories: [article]
 highlight_home: true
 header:
  overlay_image: "/assets/images/unspashflowers.jpg"
