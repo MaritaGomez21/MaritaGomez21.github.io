@@ -1,8 +1,8 @@
 ---
 layout: posts
-title:  "Portfolio On Salesforce-Experience-Site"
+title:  "Portfolio On Salesforce Experience Site"
 date:   2024-08-03 15:48:21 +0000
-tagline: "Experience Cloud"
+tagline: "Salesforce, Experience Cloud, HTML, Flows"
 tags: [Salesforce, Portfolio]
 author_profile: true
 author: Marita Gomez
@@ -25,9 +25,9 @@ To gain some hands on experience with Salesforce Experience Sites I created a Pe
 ![Home Page of the Site](/assets/images/MGomezSalesforceExperienceSitePortfolio.png)
 
 # Approach
-* "Under the hood" is a Salesforce Experience Site Aura Customer Account Portal template with the Ember theme. 
+* "Under the hood" is a Salesforce Experience Site Aura template: Customer Account Portal (Ember theme). 
 * To add depth to the site, I created additional pages (About Me, Experience, Certifications, Education, and Feedback Form).
-* Using HTML to include a favicon and navigational icons to automatically navigate to my personal LinkedIn profile and Trailhead profile when the Guest clicks on the respective footer icon.
+* Using HTML to include a customized favicon (instead of the salesforce cloud) and navigational icons to automatically navigate to my personal LinkedIn profile and Trailhead profile when the Guest clicks on the respective footer icon.
 * Provide Guests a feedback form. Using a screen flow the Guest can provide the necessary information to create a "lead" record for me. Once the user submits feedback, the screen auto-navigates to the confirmation screen within the site and sends me an email directly with the information the guest provided.
 
 # Results
