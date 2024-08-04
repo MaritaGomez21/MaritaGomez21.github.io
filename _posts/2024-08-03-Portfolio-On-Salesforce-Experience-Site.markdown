@@ -10,7 +10,7 @@ categories: [work]
 highlight_home: true
 header:
  overlay_image: "/assets/images/PortfolioBanner.png"
- teaser: "/assets/images/PortfolioBanner.png"
+ teaser: "/assets/images/PortfolioBannerMG.png"
 description: This is a summary of my Portfolio on an Experience Site
 ---
 >"Every action you take is a vote for the type of person you wish to become."
