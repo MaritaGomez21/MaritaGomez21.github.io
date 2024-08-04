@@ -7,7 +7,7 @@ Marita Gomez:
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:maritagomez21@gmail.com"
     - label: "Github"
-      icon: "fa fa-github"
+      icon: "fas fa-fw fa-link"
       url: "https://maritagomez21.github.io/"
     - label: "LinkedIn"
       icon: "fas fa-fw fa-link"
