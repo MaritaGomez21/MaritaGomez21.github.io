@@ -6,7 +6,7 @@ tags: [Salesforce, Apex, Flows]
 author_profile: true
 author: Marita Gomez
 categories: [work]
-highlight_home: true
+highlight_home: false
 header:
  overlay_image: "/assets/images/product-school-unsplash.jpg"
  teaser: "/assets/images/product-school-unsplash.jpg"
@@ -28,6 +28,7 @@ This exercise can then be extended by providing a 2nd solution (declarative vers
 ## Solutions for US-01
 With Code:
 <code>
+
 trigger CAMPXEventTrigger on CAMPX__Event__c (before insert) {
         if (Trigger.isInsert && Trigger.isBefore) {
         
@@ -35,4 +36,5 @@ trigger CAMPXEventTrigger on CAMPX__Event__c (before insert) {
         
 	      }
 }
+
 </code>
