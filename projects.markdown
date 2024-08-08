@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: categories_projects
 title: Projects
 permalink: /projects/
 ---
