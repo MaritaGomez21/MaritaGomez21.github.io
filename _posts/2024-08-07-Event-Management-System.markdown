@@ -1,11 +1,12 @@
 ---
 title:  "Event Management System"
-date:   2024-05-01 15:48:21 +0000
+date:   2024-08-07 15:48:21 +0000
 tagline: "Salesforce Automations"
 tags: [Salesforce, Apex, Flows]
 author_profile: true
 author: Marita Gomez
-highlight_home: false
+categories: [work]
+highlight_home: true
 header:
  overlay_image: "/assets/images/product-school-unsplash.jpg"
  teaser: "/assets/images/product-school-unsplash.jpg"
