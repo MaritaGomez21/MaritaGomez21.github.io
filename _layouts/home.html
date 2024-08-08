@@ -30,7 +30,7 @@ layout: archive
     {% endfor %}
 </div>
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Additional Projects" }}</h3>
+<h4 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Additional Projects" }}</h4>
 <div class="entries-{{ entries_layout }}">
     {% for post in posts %}
     {% if post.highlight_home and post.categories contains 'projects' %}
