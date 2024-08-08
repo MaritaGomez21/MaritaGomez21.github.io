@@ -1,4 +1,5 @@
 ---
+layout: posts
 title:  "Event Management System"
 date:   2024-08-07 15:48:21 +0000
 tagline: "Salesforce Automations"
