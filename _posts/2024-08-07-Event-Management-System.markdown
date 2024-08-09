@@ -44,6 +44,7 @@ Scenario 4: Verify that updating a CAMPX__Event__c record's CAMPX__Status__c to 
 **With Code:**
 
 CAMPXEventTrigger
+
 ![CAMPXEventTrigger](/assets/images/US01-Trigger.png)
 
 CAMPXEventTriggerHandler
@@ -55,7 +56,7 @@ A Before Save Record Trigger Flow
 ![CAMPX__Event__c RT Before Save Flow US-01-01](/assets/images/US01_Flow01.png)
 
 Only 1 update element is needed
-![CAMPX__Event__c RT Before Save Flow US-01-02](/assets/images/US01_Flow02.png)
+![CAMPX__Event__c RT Before Save Flow US-01-02](/assets/images/US01-Flow02.png)
 
 
 # User Story 02 - Capturing Event Status Change Timestamp
