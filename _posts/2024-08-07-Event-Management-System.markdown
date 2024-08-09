@@ -42,6 +42,7 @@ Scenario 4: Verify that updating a CAMPX__Event__c record's CAMPX__Status__c to 
 ## Solutions for US-01
 
 **With Code:**
+
 CAMPXEventTrigger
 ![CAMPXEventTrigger](/assets/images/US01-Trigger.png)
 
@@ -49,6 +50,7 @@ CAMPXEventTriggerHandler
 ![CAMPXEventTriggerHandler](/assets/images/US01-TriggerHandler.png)
 
 **With Flow**
+
 A Before Save Record Trigger Flow
 ![CAMPX__Event__c RT Before Save Flow US-01-01](/assets/images/US01_Flow01.png)
 
@@ -72,6 +74,7 @@ Scenario 3: Scenario: Verify that when a CAMPX__Event__c record is updated witho
 ## Solutions for US-02
 
 **With Code:**
+
 CAMPXEventTrigger
 ![CAMPXEventTrigger](/assets/images/US02-Trigger.png)
 
