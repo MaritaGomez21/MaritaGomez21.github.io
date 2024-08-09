@@ -16,6 +16,8 @@ description: This is a sample use case provided by CampApex.org
 ---
 >CampApex.org is a great free resource for those learning Apex. Highly recommend for hands on experience.
 
+**Currently in progress**
+
 # Background
 This Scenario, Data Model, User Stories belong to CampApex.org. The following is a brief summary of solutions that I put together (1 solution in code the other declaratively).
 
@@ -93,7 +95,6 @@ public with sharing class CAMPXEventTriggerHandler {
             newCampXEvent.CAMPX__StatusChangeDate__c = DateTime.now();
         }
     }
-    
     public static void handleBeforeUpdate(List<SObject> newSobjs, Map<Id,SObject> oldSobjsMap){
         List<CAMPX__Event__c> newCampXEventList = (List<CAMPX__Event__c>) newSobjs;
         Map<Id, CAMPX__Event__c> oldCampXEventMap = (Map<Id, CAMPX__Event__c>)oldSobjsMap;
