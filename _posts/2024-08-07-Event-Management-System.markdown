@@ -42,14 +42,7 @@ Scenario 4: Verify that updating a CAMPX__Event__c record's CAMPX__Status__c to 
 ## Solutions for US-01
 
 **With Code:**
-
-<code>
-trigger CAMPXEventTrigger on CAMPX__Event__c (before insert) {
-        if (Trigger.isInsert && Trigger.isBefore) {
-         CAMPXEventTriggerHandler.handleBeforeInsert (Trigger.new);
-	      }
-}
-</code>
+![CAMPXEventTrigger](/assets/images/US01-Trigger.png)
 
 **With Flow**
 A Before Save Record Trigger Flow
@@ -73,17 +66,9 @@ Scenario 2: Scenario: Verify that when a CAMPX__Event__c record's CAMPX__Status_
 Scenario 3: Scenario: Verify that when a CAMPX__Event__c record is updated without changing CAMPX__Status__c, the CAMPX__StatusChangeDate__c does not change.
 
 ## Solutions for US-02
-With Code:
 
-<code>
-trigger CAMPXEventTrigger on CAMPX__Event__c (before insert, before update) {
-        if (Trigger.isInsert && Trigger.isBefore) {
-	        CAMPXEventTriggerHandler.handleBeforeInsert (Trigger.new);
-        } else if (Trigger.isUpdate && Trigger.isBefore) {
-	         CAMPXEventTriggerHandler.handleBeforeUpdate (Trigger.new, Trigger.oldMap);
-        }
-}
-</code>
+**With Code:**
+![CAMPXEventTrigger](/assets/images/US02-Trigger.png)
 
 <code>
 public with sharing class CAMPXEventTriggerHandler {
