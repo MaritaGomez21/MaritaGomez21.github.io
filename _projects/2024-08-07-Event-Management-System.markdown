@@ -6,7 +6,7 @@ tagline: "Salesforce Automations"
 tags: [Salesforce, Apex, Flows]
 author_profile: true
 author: Marita Gomez
-categories: [work]
+categories: [projects]
 highlight_home: false
 header:
  overlay_image: "/assets/images/product-school-unsplash.jpg"
@@ -25,10 +25,23 @@ This exercise can then be extended by providing a 2nd solution (declarative vers
 # User Story 01 - Initializing Event Status upon Creation
 "As an event coordinator, I need the system to automatically place a newly created event record into a planning status, so that we can start the event organization process with a clear, initial state that indicates the event is in the early stages of planning."
 
-## Solutions for US-01
-With Code:
-<code>
+## Acceptance Criteria:
+When a new CAMPX__Event__c record is created, the CAMPX__Status__c field should reflect the "Planning" picklist value
 
+## Test Results:
+Scenario 1: Verify that creating a CAMPX__Event__c should set the CAMPX__Status__c to "Planning".
+
+Scenario 2: Verify that creating a CAMPX__Event__c sets the CAMPX__Status__c to "Planning", even when the user sets CAMPX__Status__c to "Active" when creating the record.
+
+Scenario 3: Verify that creating 300+ CAMPX__Event__c records in bulk sets the CAMPX__Status__c to "Planning" for all records.
+
+Scenario 4: Verify that updating a CAMPX__Event__c record's CAMPX__Status__c to "Postponed" does not revert the CAMPX__Status__c back to "Planning".
+
+## Solutions for US-01
+
+**With Code:**
+
+<code>
 trigger CAMPXEventTrigger on CAMPX__Event__c (before insert) {
         if (Trigger.isInsert && Trigger.isBefore) {
         
@@ -39,26 +52,30 @@ trigger CAMPXEventTrigger on CAMPX__Event__c (before insert) {
 
 </code>
 
-# User Story 02 - Capturing Event Status Change Timestamp
-**User Story:** 
+**With Flow**
+A Before Save Record Trigger Flow
+![CAMPX__Event__c RT Before Save Flow US-01-01](/assets/images/US01_Flow01.png)
 
+Only 1 update element is needed
+![CAMPX__Event__c RT Before Save Flow US-01-02](/assets/images/US01_Flow02.png)
+
+
+# User Story 02 - Capturing Event Status Change Timestamp
 As an event coordinator, I need the system to automatically capture the current date and time whenever the status of an event changes, so that we can have an accurate and automatic record of when each event's status was last modified, helping in timeline tracking and accountability.
 
-**Acceptance Criteria:**
+## Acceptance Criteria:
+When the CAMPX__Status__c field of an CAMPX__Event__c record is edited, the CAMPX__StatusChangeDate__c field should capture the current date and time
 
-• When the CAMPX__Status__c field of an CAMPX__Event__c record is edited, the CAMPX__StatusChangeDate__c field should capture the current date and time
-
-**Test Results:**
-
+## Test Results:
 Scenario 1: Scenario: Verify that creating a CAMPX__Event__c record should set CAMPX__StatusChangeDate__c to the current date and time.
 
 Scenario 2: Scenario: Verify that when a CAMPX__Event__c record's CAMPX__Status__c is updated, the CAMPX__StatusChangeDate__c is reset to the current date and time.
 
 Scenario 3: Scenario: Verify that when a CAMPX__Event__c record is updated without changing CAMPX__Status__c, the CAMPX__StatusChangeDate__c does not change.
 
-**Solution**
-
+## Solutions for US-02
 With Code:
+
 <code>
 trigger CAMPXEventTrigger on CAMPX__Event__c (before insert, before update) {
         if (Trigger.isInsert && Trigger.isBefore) {
@@ -71,6 +88,7 @@ trigger CAMPXEventTrigger on CAMPX__Event__c (before insert, before update) {
         }
 }
 </code>
+
 <code>
 public with sharing class CAMPXEventTriggerHandler {
     public static void handleBeforeInsert(List<CampX__Event__c> newCampXEventList){
@@ -79,7 +97,7 @@ public with sharing class CAMPXEventTriggerHandler {
         for(CampX__Event__c newCampXEvent : newCampXEventList){
             newCampXEvent.CAMPX__Status__c = 'Planning';
             newCampXEvent.CAMPX__StatusChangeDate__c = DateTime.now();
-            CampXEventTriggerHandler.updateNetRevenueHelper(newCampXEventList);
+            
         }
     }
     
@@ -98,7 +116,8 @@ public with sharing class CAMPXEventTriggerHandler {
             if (newEvent.CAMPX__Status__c != oldEvent.CAMPX__Status__c) {
                 newEvent.CAMPX__StatusChangeDate__c = DateTime.now();
             }
-            CampXEventTriggerHandler.updateNetRevenueHelper(newCampXEventList);
+            
         }
     }
-    </code>
+</code>
+
