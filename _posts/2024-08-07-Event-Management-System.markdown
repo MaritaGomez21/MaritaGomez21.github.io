@@ -14,7 +14,7 @@ header:
  caption: "Photo Credit: [Unsplash: Product School](https://unsplash.com/@productschool)"
 description: This is a sample use case provided by CampApex.org
 ---
->CampApex.org is a great free resource for those learning Apex.
+>CampApex.org is a great free resource for those learning Apex. Highly recommend for hands on experience.
 
 # Background
 This Scenario, Data Model, User Stories belong to CampApex.org. The following is a brief summary of solutions that I put together (1 solution in code the other declaratively).
@@ -44,12 +44,9 @@ Scenario 4: Verify that updating a CAMPX__Event__c record's CAMPX__Status__c to 
 <code>
 trigger CAMPXEventTrigger on CAMPX__Event__c (before insert) {
         if (Trigger.isInsert && Trigger.isBefore) {
-        
          CAMPXEventTriggerHandler.handleBeforeInsert (Trigger.new);
-        
 	      }
 }
-
 </code>
 
 **With Flow**
@@ -79,11 +76,8 @@ With Code:
 <code>
 trigger CAMPXEventTrigger on CAMPX__Event__c (before insert, before update) {
         if (Trigger.isInsert && Trigger.isBefore) {
-        
 	        CAMPXEventTriggerHandler.handleBeforeInsert (Trigger.new);
-        
         } else if (Trigger.isUpdate && Trigger.isBefore) {
-           
 	         CAMPXEventTriggerHandler.handleBeforeUpdate (Trigger.new, Trigger.oldMap);
         }
 }
@@ -97,26 +91,20 @@ public with sharing class CAMPXEventTriggerHandler {
         for(CampX__Event__c newCampXEvent : newCampXEventList){
             newCampXEvent.CAMPX__Status__c = 'Planning';
             newCampXEvent.CAMPX__StatusChangeDate__c = DateTime.now();
-            
         }
     }
     
     public static void handleBeforeUpdate(List<SObject> newSobjs, Map<Id,SObject> oldSobjsMap){
-
         List<CAMPX__Event__c> newCampXEventList = (List<CAMPX__Event__c>) newSobjs;
         Map<Id, CAMPX__Event__c> oldCampXEventMap = (Map<Id, CAMPX__Event__c>)oldSobjsMap;
-        
         // Loop through each updated campX Event record
         for (CAMPX__Event__c newEvent : newCampXEventList) {
-
             // Use the map method "get" to retrieve the old event record from the map.
             CAMPX__Event__c oldEvent = oldCampXEventMap.get(newEvent.Id);
-
             // If the status has changed, update the status change date by using the DateTime class method now()
             if (newEvent.CAMPX__Status__c != oldEvent.CAMPX__Status__c) {
                 newEvent.CAMPX__StatusChangeDate__c = DateTime.now();
             }
-            
         }
     }
 </code>
