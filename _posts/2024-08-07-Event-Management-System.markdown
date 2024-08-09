@@ -6,8 +6,8 @@ tagline: "Salesforce Automations"
 tags: [Salesforce, Apex, Flows]
 author_profile: true
 author: Marita Gomez
-categories: [projects]
-highlight_home: false
+categories: [work]
+highlight_home: true
 header:
  overlay_image: "/assets/images/product-school-unsplash.jpg"
  teaser: "/assets/images/product-school-unsplash.jpg"
