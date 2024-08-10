@@ -25,10 +25,13 @@ Primary goal was to practice writing Apex triggers and Apex classes.
 This exercise can then be extended by providing a 2nd solution (declarative version) with same result, write my version of Apex tests, and add import sample data to create appropriate reports and dashboards.
 
 # 01 - Initializing Event Status upon Creation
-**User Story (US-01)**
+
+**User Story**
+
 "As an event coordinator, I need the system to automatically place a newly created event record into a planning status, so that we can start the event organization process with a clear, initial state that indicates the event is in the early stages of planning."
 
 **Acceptance Criteria:**
+
 When a new CAMPX__Event__c record is created, the CAMPX__Status__c field should reflect the "Planning" picklist value
 
 **Test Results:**
@@ -62,9 +65,13 @@ Only 1 update element is needed
 
 
 # 02 - Capturing Event Status Change Timestamp
+
+**User Story**
+
 As an event coordinator, I need the system to automatically capture the current date and time whenever the status of an event changes, so that we can have an accurate and automatic record of when each event's status was last modified, helping in timeline tracking and accountability.
 
 **Acceptance Criteria:**
+
 When the CAMPX__Status__c field of an CAMPX__Event__c record is edited, the CAMPX__StatusChangeDate__c field should capture the current date and time
 
 **Test Results:**
@@ -86,9 +93,13 @@ CAMPXEventTriggerHandler
 ![CAMPXEventTriggerHandler](/assets/images/US02-TriggerHandler.png)
 
 # 03 - Defaulting Sponsor Status to Pending on Creation
+
+**User Story**
+
 As a sponsorship coordinator, I need the system to automatically mark a sponsor as "Pending" if the field is blank upon creation, so that we can ensure all sponsors are initially considered for review and categorization, streamlining the sponsorship management process.
 
 **Acceptance Criteria:**
+
 When a CAMPX__Sponsor__c record is created, and the CAMPX__Status__c is blank, it should be set to "Pending”
 
 **Test Results:**
@@ -108,6 +119,9 @@ US03- CAMPXSponsorTriggerHandler
 ![CAMPXSponsorTriggerHandler](/assets/images/US03-TriggerHandler.png)
 
 # 04 - Enforcing Email Requirement for Sponsor Creation
+
+**User Story**
+
 As a sponsorship coordinator, I need the system to prevent the creation of a sponsor without an email, so that we can ensure all sponsor records have valid contact information, facilitate communication, and maintain the integrity of our sponsor database.
 
 **Acceptance Criteria:**
@@ -130,6 +144,9 @@ US04- CAMPXSponsorTriggerHandler
 ![CAMPXSponsorTriggerHandler](/assets/images/US04-TriggerHandler.png)
 
 # 05 - Updating Sponsor Tier Based on Contribution Amount
+
+**User Story**
+
 As a event coordinator, I need the system to automatically set a sponsor's tier based on their contribution amount, so that we can ensure sponsors are recognized appropriately for their contribution level and streamline the sponsorship management process.
 
 **Acceptance Criteria:**
