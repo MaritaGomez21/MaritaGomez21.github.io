@@ -150,6 +150,7 @@ US04- CAMPXSponsorTriggerHandler
 As a event coordinator, I need the system to automatically set a sponsor's tier based on their contribution amount, so that we can ensure sponsors are recognized appropriately for their contribution level and streamline the sponsorship management process.
 
 **Acceptance Criteria:**
+
 The CAMPX__Tier__c should be set based on the following mapping:
 * CAMPX__ContributionAmount__c is blank or <= 0 then CAMPX__Tier__c is NULL
 * 0 < CAMPX__ContributionAmount__c < 1000 then Bronze
@@ -175,3 +176,43 @@ US05- CAMPXSponsorTrigger
 
 US05- CAMPXSponsorTriggerHandler
 ![CAMPXSponsorTriggerHandler](/assets/images/US05-TriggerHandler.png)
+
+# 06 - Conditional Sponsor Status Update Based on Event Association
+
+**User Story**
+
+As a sponsorship coordinator, I need the system to prevent the status of a sponsor record from being updated to "Accepted" unless it is associated with an event, so that we can maintain accurate and meaningful sponsor-event relationships and ensure accepted sponsors are properly linked to specific events.
+
+**Acceptance Criteria:**
+
+The CAMPX__Status__c field of a CAMPX__Sponsor__c record can not be updated to "Accepted" until the CAMPX__Event__c field is populated
+
+The user should see this error when attempting to accept a sponsor without an event: "A Sponsor must be associated with an event before being Accepted."
+
+**Test Results:**
+
+Scenario 1: Verify that creating a CAMPX__Sponsor__c record with an "Accepted" CAMPX__Status__c and a CAMPX__Event__c, does not throw an error.
+
+Scenario 2: Verify that creating a CAMPX__Sponsor__c record with an "Accepted" CAMPX__Status__c and without a CAMPX__Event__c, does throw an error.
+
+Scenario 3: Verify that updating a CAMPX__Sponsor__c record to have an "Accepted" CAMPX__Status__c and a CAMPX__Event__c, does not throw an error.
+
+Scenario 4: Verify that updating a CAMPX__Sponsor__c record to an "Accepted" CAMPX__Status__c without a CAMPX__Event__c, throws an error.
+
+Scenario 5: Verify that updating a CAMPX__Sponsor__c record to "Pending" or "Rejected" CAMPX__Status__c does not require a CAMPX__Event__c.
+
+Message: Attempted to update a CAMPX__Sponsor__c from Pending to an Accepted CAMPX__Status__c without associating a CAMPX__Event__c. Expected an error, but did not find one.
+
+# US-06 Solution
+
+**With Code:**
+
+CAMPXSponsorTrigger, no change from US-05 trigger
+
+CAMPXSponsorTriggerHandler
+
+added a helper method
+![CAMPXSponsorTriggerHandler - Method](/assets/images/US06-HelperMethod.png)
+
+this helper method is then called by the handlerBeforeInsert and handlerBeforeUpdate methods.
+![CAMPXSponsorTriggerHandler - Method](/assets/images/US06-HelperMethodReferenced.png)
