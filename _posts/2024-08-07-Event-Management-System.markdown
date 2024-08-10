@@ -142,7 +142,7 @@ Scenario 3: Verify that creating a CAMPX__Sponsor__c record with "$500" as the C
 
 Scenario 4: Verify that creating a CAMPX__Sponsor__c record with "$1000" as the CAMPX__ContributionAmount__c sets the CAMPX__Tier__c to "Silver".
 
-# US-04 Solution
+# US-05 Solution
 With Code:
 
 US05- CAMPXSponsorTrigger
