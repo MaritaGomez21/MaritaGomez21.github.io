@@ -32,6 +32,7 @@ This exercise can then be extended by providing a 2nd solution (declarative vers
 When a new CAMPX__Event__c record is created, the CAMPX__Status__c field should reflect the "Planning" picklist value
 
 **Test Results:**
+
 Scenario 1: Verify that creating a CAMPX__Event__c should set the CAMPX__Status__c to "Planning".
 
 Scenario 2: Verify that creating a CAMPX__Event__c sets the CAMPX__Status__c to "Planning", even when the user sets CAMPX__Status__c to "Active" when creating the record.
@@ -67,6 +68,7 @@ As an event coordinator, I need the system to automatically capture the current 
 When the CAMPX__Status__c field of an CAMPX__Event__c record is edited, the CAMPX__StatusChangeDate__c field should capture the current date and time
 
 **Test Results:**
+
 Scenario 1: Scenario: Verify that creating a CAMPX__Event__c record should set CAMPX__StatusChangeDate__c to the current date and time.
 
 Scenario 2: Scenario: Verify that when a CAMPX__Event__c record's CAMPX__Status__c is updated, the CAMPX__StatusChangeDate__c is reset to the current date and time.
@@ -90,12 +92,14 @@ As a sponsorship coordinator, I need the system to automatically mark a sponsor 
 When a CAMPX__Sponsor__c record is created, and the CAMPX__Status__c is blank, it should be set to "Pending”
 
 **Test Results:**
+
 Scenario 1: Verify that creating a CAMPX__Sponsor__c record without a CAMPX__Status__c, defaults the CAMPX__Status__c to "Pending".
 
 Scenario 2: Verify that creating a CAMPX__Sponsor__c record with CAMPX__Status__c set to "Rejected", does not default the CAMPX__Status__c to "Pending".
 
 # US-03 Solution
-With Code:
+
+**With Code:**
 
 US03- CAMPXSponsorTrigger
 ![CAMPXSponsorTrigger](/assets/images/US03-Trigger.png)
@@ -110,12 +114,14 @@ As a sponsorship coordinator, I need the system to prevent the creation of a spo
 When a CAMPX__Sponsor__c record is created without a value in CAMPX__Email__c, the user should see an error stating "A sponsor can not be created without an email address"
 
 **Test Results:**
+
 Scenario 1: Verify that creating a CAMPX__Sponsor__c record without a CAMPX__Email__c, causes an exception.
 
 Scenario 2: Verify that creating a CAMPX__Sponsor__c record with a CAMPX__Email__c, does not cause an exception.
 
 # US-04 Solution
-With Code:
+
+**With Code:**
 
 CAMPXSponsorTrigger
 No change from US-03
@@ -134,6 +140,7 @@ The CAMPX__Tier__c should be set based on the following mapping:
 * CAMPX__ContributionAmount__c >= 5000 then Gold
 
 **Test Results:**
+
 Scenario 1: Verify that creating a CAMPX__Sponsor__c record with a blank CAMPX__ContributionAmount__c keeps CAMPX__Tier__c blank.
 
 Scenario 2: Verify that creating a CAMPX__Sponsor__c record with a "0" as the CAMPX__ContributionAmount__c keeps CAMPX__Tier__c blank.
@@ -143,7 +150,8 @@ Scenario 3: Verify that creating a CAMPX__Sponsor__c record with "$500" as the C
 Scenario 4: Verify that creating a CAMPX__Sponsor__c record with "$1000" as the CAMPX__ContributionAmount__c sets the CAMPX__Tier__c to "Silver".
 
 # US-05 Solution
-With Code:
+
+**With Code:**
 
 US05- CAMPXSponsorTrigger
 ![CAMPXSponsorTrigger](/assets/images/US05-Trigger.png)
