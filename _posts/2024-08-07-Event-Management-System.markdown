@@ -24,13 +24,14 @@ This Scenario, Data Model, User Stories belong to CampApex.org. The following is
 Primary goal was to practice writing Apex triggers and Apex classes. 
 This exercise can then be extended by providing a 2nd solution (declarative version) with same result, write my version of Apex tests, and add import sample data to create appropriate reports and dashboards.
 
-# User Story 01 - Initializing Event Status upon Creation
+# 01 - Initializing Event Status upon Creation
+**User Story (US-01)**
 "As an event coordinator, I need the system to automatically place a newly created event record into a planning status, so that we can start the event organization process with a clear, initial state that indicates the event is in the early stages of planning."
 
-## Acceptance Criteria:
+**Acceptance Criteria:**
 When a new CAMPX__Event__c record is created, the CAMPX__Status__c field should reflect the "Planning" picklist value
 
-## Test Results:
+**Test Results:**
 Scenario 1: Verify that creating a CAMPX__Event__c should set the CAMPX__Status__c to "Planning".
 
 Scenario 2: Verify that creating a CAMPX__Event__c sets the CAMPX__Status__c to "Planning", even when the user sets CAMPX__Status__c to "Active" when creating the record.
@@ -39,7 +40,7 @@ Scenario 3: Verify that creating 300+ CAMPX__Event__c records in bulk sets the C
 
 Scenario 4: Verify that updating a CAMPX__Event__c record's CAMPX__Status__c to "Postponed" does not revert the CAMPX__Status__c back to "Planning".
 
-## Solutions for US-01
+# US-01 Solution
 
 **With Code:**
 
@@ -59,20 +60,20 @@ Only 1 update element is needed
 ![CAMPX__Event__c RT Before Save Flow US-01-02](/assets/images/US01-Flow02.png)
 
 
-# User Story 02 - Capturing Event Status Change Timestamp
+# 02 - Capturing Event Status Change Timestamp
 As an event coordinator, I need the system to automatically capture the current date and time whenever the status of an event changes, so that we can have an accurate and automatic record of when each event's status was last modified, helping in timeline tracking and accountability.
 
-## Acceptance Criteria:
+**Acceptance Criteria:**
 When the CAMPX__Status__c field of an CAMPX__Event__c record is edited, the CAMPX__StatusChangeDate__c field should capture the current date and time
 
-## Test Results:
+**Test Results:**
 Scenario 1: Scenario: Verify that creating a CAMPX__Event__c record should set CAMPX__StatusChangeDate__c to the current date and time.
 
 Scenario 2: Scenario: Verify that when a CAMPX__Event__c record's CAMPX__Status__c is updated, the CAMPX__StatusChangeDate__c is reset to the current date and time.
 
 Scenario 3: Scenario: Verify that when a CAMPX__Event__c record is updated without changing CAMPX__Status__c, the CAMPX__StatusChangeDate__c does not change.
 
-## Solutions for US-02
+# US-02 Solution
 
 **With Code:**
 
@@ -82,5 +83,70 @@ CAMPXEventTrigger
 CAMPXEventTriggerHandler
 ![CAMPXEventTriggerHandler](/assets/images/US02-TriggerHandler.png)
 
+# 03 - Defaulting Sponsor Status to Pending on Creation
+As a sponsorship coordinator, I need the system to automatically mark a sponsor as "Pending" if the field is blank upon creation, so that we can ensure all sponsors are initially considered for review and categorization, streamlining the sponsorship management process.
 
+**Acceptance Criteria:**
+When a CAMPX__Sponsor__c record is created, and the CAMPX__Status__c is blank, it should be set to "Pending”
 
+**Test Results:**
+Scenario 1: Verify that creating a CAMPX__Sponsor__c record without a CAMPX__Status__c, defaults the CAMPX__Status__c to "Pending".
+
+Scenario 2: Verify that creating a CAMPX__Sponsor__c record with CAMPX__Status__c set to "Rejected", does not default the CAMPX__Status__c to "Pending".
+
+# US-03 Solution
+With Code:
+
+US03- CAMPXSponsorTrigger
+![CAMPXSponsorTrigger](/assets/images/US03-Trigger.png)
+
+US03- CAMPXSponsorTriggerHandler
+![CAMPXSponsorTriggerHandler](/assets/images/US03-TriggerHandler.png)
+
+# 04 - Enforcing Email Requirement for Sponsor Creation
+As a sponsorship coordinator, I need the system to prevent the creation of a sponsor without an email, so that we can ensure all sponsor records have valid contact information, facilitate communication, and maintain the integrity of our sponsor database.
+
+**Acceptance Criteria:**
+When a CAMPX__Sponsor__c record is created without a value in CAMPX__Email__c, the user should see an error stating "A sponsor can not be created without an email address"
+
+**Test Results:**
+Scenario 1: Verify that creating a CAMPX__Sponsor__c record without a CAMPX__Email__c, causes an exception.
+
+Scenario 2: Verify that creating a CAMPX__Sponsor__c record with a CAMPX__Email__c, does not cause an exception.
+
+# US-04 Solution
+With Code:
+
+CAMPXSponsorTrigger
+No change from US-03
+
+US04- CAMPXSponsorTriggerHandler
+![CAMPXSponsorTriggerHandler](/assets/images/US04-TriggerHandler.png)
+
+# 05 - Updating Sponsor Tier Based on Contribution Amount
+As a event coordinator, I need the system to automatically set a sponsor's tier based on their contribution amount, so that we can ensure sponsors are recognized appropriately for their contribution level and streamline the sponsorship management process.
+
+**Acceptance Criteria:**
+The CAMPX__Tier__c should be set based on the following mapping:
+* CAMPX__ContributionAmount__c is blank or <= 0 then CAMPX__Tier__c is NULL
+* 0 < CAMPX__ContributionAmount__c < 1000 then Bronze
+* 1000 <= CAMPX__ContributionAmount__c < 5000 then Silver
+* CAMPX__ContributionAmount__c >= 5000 then Gold
+
+**Test Results:**
+Scenario 1: Verify that creating a CAMPX__Sponsor__c record with a blank CAMPX__ContributionAmount__c keeps CAMPX__Tier__c blank.
+
+Scenario 2: Verify that creating a CAMPX__Sponsor__c record with a "0" as the CAMPX__ContributionAmount__c keeps CAMPX__Tier__c blank.
+
+Scenario 3: Verify that creating a CAMPX__Sponsor__c record with "$500" as the CAMPX__ContributionAmount__c sets the CAMPX__Tier__c to "Bronze".
+
+Scenario 4: Verify that creating a CAMPX__Sponsor__c record with "$1000" as the CAMPX__ContributionAmount__c sets the CAMPX__Tier__c to "Silver".
+
+# US-04 Solution
+With Code:
+
+US05- CAMPXSponsorTrigger
+![CAMPXSponsorTrigger](/assets/images/US05-Trigger.png)
+
+US05- CAMPXSponsorTriggerHandler
+![CAMPXSponsorTriggerHandler](/assets/images/US05-TriggerHandler.png)
