@@ -216,3 +216,62 @@ added a helper method
 
 this helper method is then called by the handlerBeforeInsert and handlerBeforeUpdate methods.
 ![CAMPXSponsorTriggerHandler - Method](/assets/images/US06-HelperMethodReferenced.png)
+
+# 07 - Automatic Update of Net Revenue on Financial Changes
+
+**User Story**
+
+As a financial manager, I need the system to automatically update the net revenue of an event record whenever there are changes to its gross revenue or total expenses, so that we can ensure real-time accuracy of our financial reporting and provide stakeholders with up-to-date information on the financial status of our events.
+
+**Acceptance Criteria:**
+
+The CAMPX__NetRevenue__c of an CAMPX__Event__c record should always reflect the formula: `CAMPX__GrossRevenue__c - CAMPX__TotalExpenses__c`
+
+If either CAMPX__GrossRevenue__c or CAMPX__TotalExpenses__c are blank, the CAMPX__NetRevenue__c should be blank
+
+**Test Results:**
+
+Scenario 1: Verify that creating a CAMPX__Event__c record with $0 for CAMPX__GrossRevenue__c and $0 for CAMPX__TotalExpenses__c sets $0 value for CAMPX__NetRevenue__c.
+
+Scenario 2: Verify that creating a CAMPX__Event__c record with $3000 for CAMPX__GrossRevenue__c and $1000 for CAMPX__TotalExpenses__c sets $2000 for CAMPX__NetRevenue__c.
+
+Scenario 3: Verify that creating a CAMPX__Event__c record with $1000 for CAMPX__GrossRevenue__c and $2000 for CAMPX__TotalExpenses__c sets $-1000 for CAMPX__NetRevenue__c.
+
+Scenario 4: Creating a CAMPX__Event__c record with empty values for CAMPX__GrossRevenue__c and CAMPX__TotalExpenses__c should set a blank value for CAMPX__NetRevenue__c.
+
+Scenario 5: Updating the CAMPX__GrossRevenue__c should recalculate CAMPX__NetRevenue__c.
+
+Scenario 6: Updating the CAMPX__TotalExpenses__c should recalculate CAMPX__NetRevenue__c.
+
+**With Code:**
+
+CAMPXEventTrigger
+![CAMPXEventTrigger](/assets/images/US07-Trigger.png)
+
+CAMPXEventTriggerHandler
+![CAMPXEventTriggerHandler](/assets/images/US07-TriggerHandler.png)
+
+# 08 - Automatic Update of Net Revenue on Financial Changes
+
+**User Story**
+
+As a finance manager, I need the system to automatically keep track of an event's gross revenue by taking a sum of all accepted sponsor's contributions, so that we can maintain an accurate and real-time tally of an event's gross revenue and ensure that financial reporting reflects all accepted sponsor contributions.
+
+**Acceptance Criteria:**
+
+When a CAMPX__Sponsor__c record is updated to have an "Accepted" CAMPX__Status__c, the system should account for the sponsor's CAMPX__ContributedAmount__c in the CAMPX__Event__c's CAMPX__GrossRevenue__c field
+
+**Test Results:**
+
+Scenario 1: When an event recieves it's first accepted sponsorship, verify the the event's initial CAMPX__GrossRevenue__c is updated.
+
+Scenario 2: When an event receives its second sponsorship, the event's CAMPX__GrossRevenue__c should be updated.
+
+Scenario 3: When two distinct events receive sponsorship at the same time by creating 2 distinct Accepted CAMPX__Sponsor__c records with a CAMPX__ContributionAmount__c of $250 and $150 respectively, the first event's CAMPX__GrossRevenue__c is updated by $250 and the second by $150.
+
+Scenario 4: When a new event receives its first sponsorship, by updating a CAMPX__Sponsor__c to the Accepted Status, it's CAMPX__ContributionAmount__c should carry over.
+
+**With Flow:**
+
+An After Save Record Trigger Flow, when a Sponsor record is created or updated and CAMPX__Status__c = "Accepted"
+![CAMPX_Sponsor__c | Update CAMPX Event Gross Revenue](/assets/images/US08-RTFlow.png)
