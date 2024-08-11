@@ -2,7 +2,7 @@
 layout: posts
 title:  "Event Management System"
 date:   2024-08-07 15:48:21 +0000
-tagline: "Salesforce Automations"
+tagline: "Salesforce Apex and Flows"
 tags: [Salesforce, Apex, Flows]
 author_profile: true
 author: Marita Gomez
