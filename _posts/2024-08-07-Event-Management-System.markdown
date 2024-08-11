@@ -276,3 +276,27 @@ Scenario 4: When a new event receives its first sponsorship, by updating a CAMPX
 An After Save Record Trigger Flow, when a Sponsor record is created or updated and CAMPX__Status__c = "Accepted". This is an example of a roll up summary field with flow for a lookup relationship. As the flow loops through each sponsor record of the Sponsor Record Collection related to that specific Event record, the contribution amount is added to a flow variable "varTotalContributionAmountSponsorCollection". The Event Gross Revenue is then updated with the value from this variable.
 
 ![Update CAMPX Event Gross Revenue](/assets/images/US08-RTFlow.png)
+
+# 09 - Adjusting Event Gross Revenue for Cancelled Sponsorships Or Event Changes
+
+**User Story**
+
+As a finance manager, I need the system to automatically subtract a sponsor's contribution amount from its associated event's gross revenue when the sponsor is no longer "Accepted" or tied to the event, so that our financial records accurately reflect the current status of sponsor contributions and ensure that the event's gross revenue reports are precise and reliable for making informed decisions.
+
+**Acceptance Criteria:**
+
+When the CAMPX__Status__c of a CAMPX__Sponsor__c changes from "Accepted" to "Cancelled" or "Pending" the associated CAMPX__Event__c's CAMPX__GrossRevenue__c field should no longer reflect the sponsor's CAMPX__ContributedAmount__c
+
+When the CAMPX__Event__c lookup of a CAMPX__Sponsor__c changes, the previously associated CAMPX__Event__c's CAMPX__GrossRevenue__c field should no longer reflect the sponsor's CAMPX__ContributedAmount__c
+
+Scenario 1: An Event had an accepted Sponsor that contributed $500. Verify that changing the sponsor's status to Rejected removes the $500 contribution from the event's gross revenue.
+
+Scenario 2: An Event had an accepted Sponsor that contributed $2500. Verify that changing the sponsor's status to Pending removes the $2500 contribution from the event's gross revenue.
+
+Scenario 3: An Event had an accepted Sponsor that contributed $100. Verify that removing the sponsor's event lookup the $100 contribution is removed from the event's gross revenue.
+
+**With Flow:**
+
+An After Save Record Trigger Flow, when a Sponsor record is updated and CAMPX__Status__c isChanged OR CAMPX__Event__c isChanged. 
+
+![Adjust CAMPX Event Gross Revenue](/assets/images/US09-RTFlow.png)
