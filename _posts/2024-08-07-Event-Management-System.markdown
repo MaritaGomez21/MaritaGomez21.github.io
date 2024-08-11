@@ -273,5 +273,6 @@ Scenario 4: When a new event receives its first sponsorship, by updating a CAMPX
 
 **With Flow:**
 
-An After Save Record Trigger Flow, when a Sponsor record is created or updated and CAMPX__Status__c = "Accepted"
+An After Save Record Trigger Flow, when a Sponsor record is created or updated and CAMPX__Status__c = "Accepted". This is an example of a roll up summary field with flow for a lookup relationship. As the flow loops through each sponsor record of the Sponsor Record Collection related to that specific Event record, the contribution amount is added to a flow variable "varTotalContributionAmountSponsorCollection". The Event Gross Revenue is then updated with the value from this variable.
+
 ![CAMPX_Sponsor__c | Update CAMPX Event Gross Revenue](/assets/images/US08-RTFlow.png)
