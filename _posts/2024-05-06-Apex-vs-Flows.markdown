@@ -27,6 +27,7 @@ In a hypothetical case the a sales manager would like a task assigned to the lea
 In Salesforce, the following are two examples of how to solution this business request:
 1. An After Save Record Trigger Flow
 2. Apex Trigger, Handler, Utility Class, and Test
+
 To understand these 2 solutions of going either route (programmatic vs flows) I set up both utilizing separate developer orgs.
 
 ### The Record Trigger Flow:
