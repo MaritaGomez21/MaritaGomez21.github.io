@@ -42,15 +42,15 @@ Data Source for this project is a backup file of the AdventureWorks database ( .
 
 ## Data Cleaning
 
-It is important to remove any information that is NOT needed, importing specific tables, removing columns, removing duplicate data, formatting to facilitate data analysis and reporting. Formating may include renaming columns, concatenate Names, ensuring data is filtered to what is needed. For example in this project the date table began in 2005 vs sales data began in 2010. Years before 2010 were removed by filtering by a custom year list.
+It is important to remove any information that is NOT needed, removing uneeded columns, removing duplicate data, formatting to facilitate data analysis and reporting. Formatting may include renaming columns, concatenating names, and ensuring data is filtered to what is needed. For example in this project the date table began in 2005 vs sales data began in 2010. Years before 2010 were removed by filtering by a custom year list created from the sales order table.
 
 ## Data Modeling
 
-To use Time Intelligence Functions in Power BI, we need to mark one of the tables containing date column as Date Table. Refer to  https://learn.microsoft.com/en-us/dax/time-intelligence-functions-dax
+To use [Time Intelligence Functions](https://learn.microsoft.com/en-us/dax/time-intelligence-functions-dax) in Power BI, one of the tables containing a date column needs to be marked as a Date Table. 
 
-The date table that we have has 3 relationships with the fact table. To facilitate reporting and have the dimensional tables achieve that desirable one active relationship with the fact table, the date table was referenced (”duplicated”) three times in power query. Each dimension table (Order, Ship, and Due) is called a role playing dimension. This does duplicate data but only requires “slightly” more storage. Refer to https://learn.microsoft.com/en-us/power-bi/guidance/star-schema
+The date table from the AdventureWorks database had 3 relationships with the fact table. To facilitate reporting and have the dimensional tables achieve that desirable one active relationship with the fact table, the date table was referenced ("duplicated") three times in power query. These 3 dimension tables (Order, Ship, and Due) are called [role playing dimension tables](https://learn.microsoft.com/en-us/power-bi/guidance/star-schema). Performing this step does duplicate data but only requires “slightly” more storage. 
 
-Finally each of these tables were marked as a data table. The final model looks like this:
+Finally these tables were each marked as a data table. The final model looks like this:
 
 ![AdventureWorksSalesSchema](/assets/images/AdventureWorksSalesSchema.png)
 
