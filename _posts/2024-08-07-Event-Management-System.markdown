@@ -16,13 +16,11 @@ description: This is a sample use case provided by CampApex.org
 ---
 >CampApex.org is a great free resource for those learning Apex. Highly recommend for hands on experience.
 
-**Currently in progress**
-
 # Background
-This Scenario, Data Model, User Stories belong to CampApex.org. The following is a brief summary of solutions that I put together (1 solution in code the other declaratively).
+This Scenario, Data Model, and User Stories belong to CampApex.org. The following is a brief summary of solutions that I put together.
 
 Primary goal was to practice writing Apex triggers and Apex classes. 
-This exercise can then be extended by providing a 2nd solution (declarative version) with same result, write my version of Apex tests, and add import sample data to create appropriate reports and dashboards.
+This exercise can then be extended by providing a 2nd solution (declarative version) with same result, write my version of Apex tests, and import sample data to create appropriate reports and dashboards.
 
 # 01 - Initializing Event Status upon Creation
 
