@@ -247,7 +247,7 @@ CAMPXEventTrigger
 CAMPXEventTriggerHandler
 ![CAMPXEventTriggerHandler](/assets/images/US07-TriggerHandler.png)
 
-# 08 - Automatic Update of Net Revenue on Financial Changes
+# 08 - Updating Event Gross Revenue upon Sponsor Acceptance
 
 **User Story**
 
