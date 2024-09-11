@@ -1,8 +1,8 @@
 ---
 layout: posts
-title:  "Event Management System"
+title:  "Practice Apex & Flows: An Event Management System"
 date:   2024-08-07 15:48:21 +0000
-tagline: "Salesforce Apex and Flows"
+tagline: "Salesforce Automations"
 tags: [Salesforce, Apex, Flows]
 author_profile: true
 author: Marita Gomez
@@ -198,8 +198,6 @@ Scenario 3: Verify that updating a CAMPX__Sponsor__c record to have an "Accepted
 Scenario 4: Verify that updating a CAMPX__Sponsor__c record to an "Accepted" CAMPX__Status__c without a CAMPX__Event__c, throws an error.
 
 Scenario 5: Verify that updating a CAMPX__Sponsor__c record to "Pending" or "Rejected" CAMPX__Status__c does not require a CAMPX__Event__c.
-
-Message: Attempted to update a CAMPX__Sponsor__c from Pending to an Accepted CAMPX__Status__c without associating a CAMPX__Event__c. Expected an error, but did not find one.
 
 # US-06 Solution
 
